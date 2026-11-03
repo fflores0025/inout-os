@@ -1,0 +1,6 @@
+#!/bin/sh
+# Se ejecuta dentro del chroot al construir la imagen.
+set -e
+# Sin gestor de login gráfico: la sesión arranca por autologin en tty1.
+systemctl disable lightdm gdm3 sddm 2>/dev/null || true
+chmod +x /usr/local/bin/inout-shell

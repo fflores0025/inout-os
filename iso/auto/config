@@ -1,0 +1,19 @@
+#!/bin/sh
+# Configuración de live-build para INOUT OS (base Debian 13 trixie, x86-64).
+set -e
+
+lb config noauto \
+    --distribution trixie \
+    --architectures amd64 \
+    --archive-areas "main contrib non-free-firmware" \
+    --binary-images iso-hybrid \
+    --bootloaders "grub-efi syslinux" \
+    --debian-installer none \
+    --apt-indices false \
+    --apt-recommends false \
+    --iso-application "INOUT OS" \
+    --iso-publisher "InOut Event Systems; InOut Media" \
+    --iso-volume "INOUT_OS" \
+    --image-name "inout-os" \
+    --bootappend-live "boot=live components quiet splash locales=es_ES.UTF-8 keyboard-layouts=es timezone=Europe/Madrid" \
+    "${@}"

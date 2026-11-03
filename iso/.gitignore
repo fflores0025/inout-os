@@ -1,0 +1,15 @@
+config/includes.chroot/
+chroot/
+cache/
+.build/
+binary/
+config/binary
+config/bootstrap
+config/chroot
+config/common
+config/source
+*.iso
+*.log
+*.contents
+*.files
+*.packages

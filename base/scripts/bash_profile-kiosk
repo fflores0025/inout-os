@@ -1,0 +1,4 @@
+# Añadir al final de ~/.bash_profile: lanza X solo en tty1.
+if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+  exec startx
+fi

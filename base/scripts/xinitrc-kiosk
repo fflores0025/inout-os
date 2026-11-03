@@ -1,3 +1,10 @@
 #!/bin/sh
+# Sesión kiosco de INOUT OS: X11 + Openbox + shell QML a pantalla completa.
+
+# Kiosco: sin salvapantallas ni apagado de pantalla.
+xset s off
+xset -dpms
+xset s noblank
+
 openbox &
 exec inout-shell
